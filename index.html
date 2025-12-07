@@ -316,6 +316,97 @@
       font-size: 11px;
       color: var(--muted);
     }
+        /* FEATURED PROJECTS / PRODUCTS */
+    .projects {
+      margin-top: 32px;
+    }
+
+    .projects-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .projects-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .projects-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project-card {
+      background: var(--bg-light);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 12px 12px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 12px 26px rgba(0,0,0,0.4);
+    }
+
+    .project-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #93c5fd;
+    }
+
+    .project-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .project-desc {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .stars {
+      color: #fbbf24;
+      font-size: 12px;
+    }
+
+    .review-quote {
+      font-size: 11px;
+      color: #e5e7eb;
+      margin-top: 4px;
+      padding-top: 4px;
+      border-top: 1px solid rgba(15,23,42,0.9);
+      font-style: italic;
+    }
 
     .process-steps {
       display: flex;
@@ -462,6 +553,7 @@
         </div>
         <div class="nav-links">
           <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
           <a href="#process">Process</a>
           <a href="#contact">Contact</a>
           <button class="nav-cta" onclick="scrollToContact()">Get a free quote</button>
@@ -578,6 +670,77 @@
           </div>
         </aside>
       </main>
+
+            <!-- FEATURED PROJECTS / PRODUCTS -->
+      <section class="projects" id="projects">
+        <div class="projects-header">
+          <div>
+            <div class="projects-title">Featured projects & sample products</div>
+            <div class="projects-sub">
+              A few examples of the kind of apps and websites we can build for you.
+            </div>
+          </div>
+          <a href="#contact" class="nav-cta" style="text-decoration:none;">
+            Start a similar project
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-tag">Landing page · E-commerce</div>
+            <div class="project-name">GlowCart – Beauty Store Website</div>
+            <p class="project-desc">
+              A modern, mobile-friendly storefront with product gallery, cart preview,
+              coupon support and WhatsApp “buy now” shortcuts for a small beauty brand.
+            </p>
+            <div class="project-meta">
+              <span>Stack: HTML, CSS, JS</span>
+              <span class="stars">★★★★★</span>
+            </div>
+            <div class="review-quote">
+              “We started getting orders from day one. The site is fast, simple and works
+              perfectly on mobile.” – Client review
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-tag">Dashboard · SaaS</div>
+            <div class="project-name">InsightPulse – Analytics Panel</div>
+            <p class="project-desc">
+              Admin dashboard for tracking sign-ups, revenue and customer feedback with
+              dynamic charts, role-based login and export to Excel.
+            </p>
+            <div class="project-meta">
+              <span>Stack: React, Node, MySQL</span>
+              <span class="stars">★★★★☆</span>
+            </div>
+            <div class="review-quote">
+              “Exactly what we needed. Clean UI, easy to use and new reports can be added
+              in a few clicks.” – Product owner
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-tag">AI · Multilingual</div>
+            <div class="project-name">Sentilytics – Review Sentiment Tool</div>
+            <p class="project-desc">
+              Web app that analyzes product reviews in multiple languages, shows
+              sentiment scores and highlights common positive and negative themes.
+            </p>
+            <div class="project-meta">
+              <span>Stack: Python, Hugging Face</span>
+              <span class="stars">★★★★★</span>
+            </div>
+            <div class="review-quote">
+              “Helped us quickly understand what users love and what we need to fix.
+              The multilingual support is a huge plus.” – Store manager
+            </div>
+          </article>
+        </div>
+      </section>
 
       <!-- CONTACT SECTION -->
       <section class="contact" id="contact">
